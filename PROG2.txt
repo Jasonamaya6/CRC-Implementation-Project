@@ -1,0 +1,24 @@
+Jason Amaya
+Dr.Tawaab
+IT215
+Novemeber 7th, 2023
+
+i.Start your TCP client application without the UDP server running. What happens?
+Why? 
+
+When running a UDP application on the client side, it won't immediately crash or raise errors in contrast to TCP. UDP is designed to send data without requiring an established connection, it will send the data and move on.
+
+
+ii. Try different examples and explain the output!
+
+When starting the server side of a UDP connection, it won't stall like TCP, as UDP is connectionless. The server will simply listen for incoming datagrams, and it doesn't wait for a client to establish a connection.
+If there's an error in the IP address or port specified on the client side in a UDP connection, the client will proceed without raising an error. It will send the data to the address provided, even if it's incorrect. However, since UDP doesn't guarantee delivery or provide acknowledgment, the data might be sent to the wrong address and remain unanswered. Unlike TCP, which would raise an error when there's an issue with the connection setup, UDP doesn't provide the same level of error handling for connection-related issues.
+
+
+vi. Compare the difference between TCP and UDP programs! 
+
+The primary distinction between these two protocols lies in their error detection and handling mechanisms. TCP provides users with robust error detection, which means that if there are issues with the IP address or port, it will result in a connection failure. In contrast, UDP simply sends data without verifying whether it reaches the correct server, making it important to exercise caution when configuring connections.
+
+
+
+
